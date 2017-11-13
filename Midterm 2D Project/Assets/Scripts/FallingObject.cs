@@ -2,20 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FallingObject : MonoBehaviour {
+public class FallingObject : MonoBehaviour
+{
 
     private Rigidbody2D myRigidBody;
 
-	// Use this for initialization
+    private SpriteRenderer spriteRenderer;
+
+
 	void Start ()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
     void OnTriggerEnter2D(Collider2D other)
@@ -23,6 +22,14 @@ public class FallingObject : MonoBehaviour {
         if (other.tag == "Player")
         {
             myRigidBody.isKinematic = false;
+        }
+    }
+
+    private void OnCollision2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            spriteRenderer.flipY = false;
         }
     }
 }
