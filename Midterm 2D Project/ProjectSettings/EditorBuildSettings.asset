@@ -11,3 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Midterm 2D Scene.unity
     guid: 5d8f3f8bf58dffd42af70180d4ead37e
+  - enabled: 1
+    path: Assets/Scenes/Midterm 2D Scene 2.unity
+    guid: e0fbe2e108984f24a95f9a9104242825
+  - enabled: 1
+    path: Assets/Scenes/Midterm 2D Sence 3.unity
+    guid: 452285046c5d75345be64f26c1e22531
+  - enabled: 1
+    path: Assets/Scenes/End Scene.unity
+    guid: 8f27de18c3c2d414da67e212239dd6be
+  - enabled: 1
+    path: Assets/Scenes/Credits Scene.unity
+    guid: d87b2bc4b776dd94480184bc63c75752

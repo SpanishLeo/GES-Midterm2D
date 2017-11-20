@@ -10,6 +10,4 @@ public class TitleScreen : MonoBehaviour
     {
         SceneManager.LoadScene("Midterm 2D Scene");
     }
-
-
 }
