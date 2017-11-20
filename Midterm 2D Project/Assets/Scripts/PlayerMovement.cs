@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour {
     private bool isOnGround;
     private Rigidbody2D myRigidbody2D;
     private bool pressedJump;
+    private AudioSource audioSource;
     private bool facingRight = true;
     private Animator anim;
     #endregion
@@ -33,6 +34,8 @@ public class PlayerMovement : MonoBehaviour {
     void Start ()
     {
         myRigidbody2D = GetComponent<Rigidbody2D>();
+
+        audioSource = GetComponent<AudioSource>();
 
         anim = GetComponent<Animator>();
     }
@@ -68,8 +71,9 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (pressedJump && isOnGround)
         {
-            myRigidbody2D.velocity =
-                new Vector2(myRigidbody2D.velocity.x, jumpHeight);
+            myRigidbody2D.velocity = new Vector2(myRigidbody2D.velocity.x, jumpHeight);
+
+            audioSource.Play();
 
             isOnGround = false;
         }

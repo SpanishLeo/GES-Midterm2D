@@ -9,8 +9,12 @@ public class Checkpoint : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    private AudioSource audioSource;
+
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         spriteRenderer = GetComponent<SpriteRenderer>();
         DeactivateCheckpoint();
     }
@@ -34,6 +38,7 @@ public class Checkpoint : MonoBehaviour
     {
         Debug.Log("Checkpoint Reached");
         spriteRenderer.enabled = true;
+        audioSource.Play();
         currentCheckpoint = this;
     }
 

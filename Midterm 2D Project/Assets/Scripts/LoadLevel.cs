@@ -8,7 +8,6 @@ public class LoadLevel : MonoBehaviour
     [SerializeField]
     string scenceToLoad;
 
-
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (Input.GetButtonDown("Action"))

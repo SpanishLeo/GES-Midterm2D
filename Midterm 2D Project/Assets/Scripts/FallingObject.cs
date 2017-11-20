@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class FallingObject : MonoBehaviour
 {
-
     private Rigidbody2D myRigidBody;
 
     private SpriteRenderer spriteRenderer;
-
 
 	void Start ()
     {
@@ -22,14 +20,6 @@ public class FallingObject : MonoBehaviour
         if (other.tag == "Player")
         {
             myRigidBody.isKinematic = false;
-        }
-    }
-
-    private void OnCollision2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-        {
-            spriteRenderer.flipY = false;
         }
     }
 }
